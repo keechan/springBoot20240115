@@ -1,0 +1,5 @@
+package com.korea.test.login;
+
+public class LogintVO {
+
+}

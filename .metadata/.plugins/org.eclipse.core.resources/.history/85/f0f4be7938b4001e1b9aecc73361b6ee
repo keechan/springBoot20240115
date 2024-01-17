@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.rubypaper.project.shop.ShopDao">
+
+  <select id="getShopEdit"
+          parameterType="com.rubypaper.project.shop.ShopVO" 
+          resultType="com.rubypaper.project.shop.ShopVO" >
+    select *  from  shopTbl0116 where productId = #{productId} 
+  </select> 
+   
+  <select id="shopList"
+          resultType="com.rubypaper.project.shop.ShopVO" >
+    select *  from  shopTbl0116 
+  </select> 
+  
+  <select id="seq_ShopTbl0116" resultType="int" >
+    select seq_ShopTbl0116.nextval as seq from dual 
+  </select>
+ 
+ <insert id="shopInsert" 
+         parameterType="com.rubypaper.project.shop.ShopVO" >
+
+  insert  into shopTbl0116 (productId, productName, productPrice, productDesc, productImg)
+  values (#{productId}, #{productName}, #{productPrice}, #{productDesc}, #{productImg})
+ </insert> 
+
+ <delete id="shopDelete" 
+         parameterType="com.rubypaper.project.shop.ShopVO" >
+  delete from shopTbl0116 where productId = #{productId}
+ </delete>
+
+  <select id="cartList"
+          resultType="com.rubypaper.project.shop.CartVO" >
+    select *  from  shopTbl0116 
+  </select>
+
+ </mapper>

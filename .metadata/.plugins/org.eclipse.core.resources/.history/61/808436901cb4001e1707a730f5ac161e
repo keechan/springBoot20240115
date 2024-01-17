@@ -1,0 +1,13 @@
+package com.rubypaper.project.shop;
+
+import lombok.Data;
+
+@Data
+public class ShopVO {
+	 private long productId;
+	 private String productName;
+	 private long productPrice;
+	 private String productDesc;
+	 private String productImg; 
+	 private String productDate;
+}

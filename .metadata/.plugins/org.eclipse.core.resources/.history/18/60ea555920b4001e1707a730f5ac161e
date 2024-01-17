@@ -1,0 +1,7 @@
+package com.rubypaper.project.shop;
+
+import org.springframework.stereotype.Service;
+
+public interface ShopService {
+	public int seq_ShopTbl0116();
+}

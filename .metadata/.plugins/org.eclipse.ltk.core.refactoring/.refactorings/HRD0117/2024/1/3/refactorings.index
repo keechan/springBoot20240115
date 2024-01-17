@@ -1,0 +1,23 @@
+1705455574095	Copy compilation unit
+1705455646305	Rename type 'DiceController'
+1705455650597	Delete element
+1705455774955	Rename type 'ImsiController'
+1705456257610	Rename type 'LoginController'
+1705456361719	Rename resource 'board-mapper.xml'
+1705456516638	Rename package 'com.korea.test.login'
+1705457190596	Rename resource 'board'
+1705457203186	Delete element
+1705457204871	Delete element
+1705457207257	Delete element
+1705457208781	Delete element
+1705457559955	Move compilation unit
+1705457601862	Delete element
+1705457718700	Copy file
+1705457733317	Move file
+1705457743833	Delete element
+1705457831147	Move file
+1705459585175	Move file
+1705459590250	Move file
+1705461963123	Rename resource 'mapper'
+1705462514229	Rename resource 'getBoardList.jsp'
+1705462797507	Rename resource 'BoardForm.jsp'

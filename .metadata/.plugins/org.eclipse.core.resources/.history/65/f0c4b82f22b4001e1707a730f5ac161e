@@ -1,0 +1,28 @@
+package com.rubypaper.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.rubypaper.project.shop.ShopServiceImpl;
+
+@Controller
+public class ShopController {
+	@Autowired
+	ShopServiceImpl service;
+	
+	@GetMapping("ShopForm.do")
+	String ShopForm(Model model) {
+		System.out.println("=====>ShopForm : ");
+		model.addAttribute("seq", service.seq_ShopTbl0116());
+		return "/shop/ShopForm";
+	}
+	
+	@PostMapping("ShopFormOK.do")
+	String ShopForm(Model model) {
+		System.out.println("=====>ShopForm : ");
+		model.addAttribute("seq", service.seq_ShopTbl0116());
+		return "/shop/ShopForm";
+	}
+}

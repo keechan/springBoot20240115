@@ -1,0 +1,5 @@
+package com.rubypaper.project.shop;
+
+public interface ShopService {
+
+}

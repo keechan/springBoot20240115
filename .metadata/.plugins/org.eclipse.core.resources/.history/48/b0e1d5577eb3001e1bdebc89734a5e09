@@ -1,0 +1,11 @@
+package com.rubypaper.project.psd;
+
+import java.util.List;
+
+@Mapper
+public interface PsdDao {
+	List<PsdVO> selectPsdList();
+	void insertPsd(PsdVO vo);
+	void updatePsd(PsdVO vo);
+	void deletePsd(PsdVO vo);
+}

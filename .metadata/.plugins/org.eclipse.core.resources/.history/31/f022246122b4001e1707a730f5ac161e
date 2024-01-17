@@ -1,0 +1,32 @@
+package com.rubypaper.controller;
+
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.rubypaper.project.shop.ShopServiceImpl;
+import com.rubypaper.project.shop.ShopVO;
+
+@Controller
+public class ShopController {
+	@Autowired
+	ShopServiceImpl service;
+	
+	@GetMapping("ShopForm.do")
+	String ShopForm(Model model) {
+		System.out.println("=====>ShopForm : ");
+		model.addAttribute("seq", service.seq_ShopTbl0116());
+		return "/shop/ShopForm";
+	}
+	
+	@PostMapping("ShopFormOK.do")
+	String ShopFormOK(ShopVO vo) {
+		System.out.println("=====>ShopFormOK : ");
+		service.shopInsert();
+		return "redirect:/shop/ShopForm";
+	}
+}

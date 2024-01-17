@@ -1,0 +1,8 @@
+package com.rubypaper.project.shop;
+
+import org.apache.ibatis.annotations.Mapper;
+
+@Mapper
+public interface ShopDao {
+	public int seq_ShopTbl0116();
+}

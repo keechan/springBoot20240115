@@ -1,0 +1,9 @@
+package com.rubypaper.project.board;
+
+public Interface BoardService {
+	void insert(BoardVO vo);
+	void update(BoardVO vo);
+	void delete(BoardVO vo);
+	BoardVO getBoard(BOardVO vo);
+	List<BoardVO> getBoardLIst(BoardVO vo);
+}

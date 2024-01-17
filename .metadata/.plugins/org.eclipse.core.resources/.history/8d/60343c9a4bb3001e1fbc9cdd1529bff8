@@ -1,0 +1,38 @@
+package com.rubypaper.project.board;
+
+import java.util.List;
+
+@Service
+public class BoardServiceImpl implements BoardDao {
+
+	@Override
+	public void insert(BoardVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(BoardVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(BoardVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public BoardVO getBoard(BoardVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<BoardVO> getBoardLIst(BoardVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

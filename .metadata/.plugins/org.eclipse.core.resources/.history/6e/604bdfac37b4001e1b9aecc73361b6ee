@@ -1,0 +1,6 @@
+package com.rubypaper.controller;
+
+@Controller
+public class CartController {
+
+}

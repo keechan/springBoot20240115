@@ -1,0 +1,11 @@
+package com.rubypaper.project.shop;
+
+@Service
+public class ShopServiceImpl implements ShopService{
+	
+	@Override
+	public int seq_ShopTbl0116() {
+		return ;
+	}
+
+}

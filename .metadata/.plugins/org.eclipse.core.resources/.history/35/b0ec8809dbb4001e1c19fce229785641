@@ -1,0 +1,6 @@
+package com.korea.test.login;
+
+@Service
+public class LogintServiceImpl implements LogintService {
+
+}

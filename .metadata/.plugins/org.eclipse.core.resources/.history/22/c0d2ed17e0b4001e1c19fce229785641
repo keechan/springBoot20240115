@@ -1,0 +1,44 @@
+package com.korea.controller;
+
+import java.util.Random;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.korea.test.logint.LogintServiceImpl;
+import com.korea.test.logint.LogintVO;
+
+@Controller
+public class LogintController {
+	@Autowired 
+	LogintServiceImpl service;
+	
+	LogintController(){
+		  System.out.println("=>LogintController ");	
+	}
+	
+	@GetMapping("table.do")
+	 String LogintRandomFormOk(LogintVO  vo) {		
+	   System.out.println("===> table.do");
+	  
+	   for(int i=1;i<=5;i++ ) {
+		   int leftLimit = 97; // letter 'a'
+		   int rightLimit = 122; // letter 'z'
+		   int targetStringLength = 5;
+		   Random random = new Random();
+		   String generatedString = random.ints(leftLimit, rightLimit + 1)
+		           .limit(targetStringLength)
+		           .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+		           .toString();
+		   System.out.println(generatedString);
+		   
+		   vo.setIdx1(i);
+		   vo.setName1(generatedString);
+		   vo.setPwd1("");
+		   service.insertLogint(vo);   
+	   }
+	   
+	   return "redirect:index.do";		
+	}
+}

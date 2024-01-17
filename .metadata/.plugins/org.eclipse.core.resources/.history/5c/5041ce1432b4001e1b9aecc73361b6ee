@@ -1,0 +1,13 @@
+package com.rubypaper.project.shop;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+
+@Mapper
+public interface ShopDao {
+	public int seq_ShopTbl0116();
+	void shopInsert(ShopVO vo);
+	List<ShopVO> shopList();
+	ShopVO getShop(ShopVO vo);
+}

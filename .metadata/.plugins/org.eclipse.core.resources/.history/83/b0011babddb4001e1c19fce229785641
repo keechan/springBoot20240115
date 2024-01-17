@@ -1,0 +1,7 @@
+package com.korea.test.logint;
+
+public class TestServiceImpl {
+	TestServiceImpl() {
+		
+	}
+}

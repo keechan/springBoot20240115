@@ -1,0 +1,61 @@
+package com.rubypaper.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.rubypaper.project.board.BoardServiceImpl;
+import com.rubypaper.project.board.BoardVO;
+
+@Controller
+public class BoardController {
+	//interface 대신 필히 class를  Type으로 지정해야 함
+	@Autowired
+	BoardServiceImpl service;
+	
+	BoardController() {
+		System.out.println("===>BoardController ");
+	}
+
+	@GetMapping("BoardForm.do")
+	String BoardForm() {
+		System.out.println(" ===>BoardForm.do");
+	
+		return "/board/BoardForm";
+	}
+	
+	@GetMapping("BoardFormOK.do")
+	String BoardFormOK(Model model, BoardVO vo) {
+		System.out.println(" ===> BoardFormOK.do");
+		service.insert(vo);
+		model.addAttribute("li", service.getBoardList(null));
+		return "/board/getBoardList";
+	}
+	
+	@GetMapping("BoardEdit.do")
+	String BoardEdit(Model model, BoardVO vo) {
+		System.out.println(" ===>BoardEdit.do");
+		model.addAttribute("m", service.getBoard(vo));
+		return "/board/BoardEdit";
+	}
+	//
+	@GetMapping("BoardEditOK.do")
+	String BoardEditOK(Model model, BoardVO vo) {
+		System.out.println(" ===> BoardEditOK.do");
+		System.out.println("  ===> updateCnt()");
+		service.updateCnt(vo);
+		System.out.println("  ===> update()");
+		service.update(vo);
+		model.addAttribute("li", service.getBoardList(null));
+		return "/board/getBoardList";
+	}
+
+	@GetMapping("getBoardList.do")
+	String getBoardList(Model model) {
+		System.out.println(" =====>getBoardList : ");
+
+		model.addAttribute("li", service.getBoardList(null));		
+		return "/board/getBoardList";
+	}
+}

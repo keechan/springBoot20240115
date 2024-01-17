@@ -1,0 +1,6 @@
+package com.rubypaper.project.board;
+
+@Service
+public class TestServiceImpl {
+
+}

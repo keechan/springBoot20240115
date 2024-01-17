@@ -1,0 +1,7 @@
+package com.korea.test;
+
+public class TestServiceImpl {
+	TestServiceImpl() {
+		
+	}
+}

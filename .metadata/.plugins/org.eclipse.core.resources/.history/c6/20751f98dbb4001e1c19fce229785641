@@ -1,0 +1,10 @@
+package com.korea.test.logint;
+
+import lombok.Data;
+
+@Data
+public class LogintVO {   
+	private int idx;
+	private String name;
+	private String pwd;
+}

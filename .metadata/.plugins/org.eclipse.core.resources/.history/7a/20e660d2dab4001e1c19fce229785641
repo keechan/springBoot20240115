@@ -1,0 +1,10 @@
+package com.korea.test.login;
+
+import org.apache.ibatis.annotations.Mapper;
+
+@Mapper
+public interface LogintDao {
+	private int idx;
+	private String name;
+	private String pwd;
+}
