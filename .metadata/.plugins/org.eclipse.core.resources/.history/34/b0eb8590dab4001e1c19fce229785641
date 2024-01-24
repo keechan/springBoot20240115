@@ -1,8 +1,0 @@
-package com.korea.test.login;
-
-@Mapper
-public interface LogintDao {
-	private int idx;
-	private String name;
-	private String pwd;
-}

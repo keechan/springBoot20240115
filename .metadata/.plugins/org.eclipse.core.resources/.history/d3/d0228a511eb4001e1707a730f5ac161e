@@ -1,7 +1,0 @@
-package com.rubypaper.project.shop;
-
-public interface ShopDao {
-	public int seq_ShopTbl0116() {
-		
-	}
-}

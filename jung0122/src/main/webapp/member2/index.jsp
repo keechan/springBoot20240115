@@ -14,7 +14,7 @@ table{
 <section>
 <br>
 <div align="center">
-	<h1>MANAGER 접속을 환영합니다.</h1>
+	<h1>MEMBER2 접속을 환영합니다.</h1>
 </div>
 <br/>
 </section>

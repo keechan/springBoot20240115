@@ -1,9 +1,0 @@
-package com.rubypaper.project.shop;
-
-public class CartVO {
-    private long cartId;
-    private long productId;
-    private String productName;
-    private long productPrice;
-    private String productImg;
-}

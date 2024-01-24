@@ -1,6 +1,0 @@
-package com.rubypaper.controller;
-
-@RestController
-public class TestController {
-
-}

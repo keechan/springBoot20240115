@@ -1,5 +1,0 @@
-package com.rubypaper.project.shop;
-@Mapper
-public interface ShopDao {
-	public int seq_ShopTbl0116();
-}

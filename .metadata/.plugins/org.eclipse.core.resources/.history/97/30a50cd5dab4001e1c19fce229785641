@@ -1,8 +1,0 @@
-package com.korea.test.login;
-
-import org.apache.ibatis.annotations.Mapper;
-
-@Mapper
-public interface LogintDao {
-	void insertLogint(LoginVO vo);
-}

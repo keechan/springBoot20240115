@@ -1,8 +1,0 @@
-package com.rubypaper.project.psd;
-
-import java.util.List;
-
-public interface PsdService {
-	   List<PsdVO> psdList();
-	   void psdInsert(PsdVO vo);
-}

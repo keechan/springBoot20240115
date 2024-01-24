@@ -1,5 +1,0 @@
-package com.rubypaper.project.shop;
-
-public interface ShopService {
-	public int seq_ShopTbl0116();
-}

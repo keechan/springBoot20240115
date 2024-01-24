@@ -28,7 +28,7 @@ public class SecurityConfig {
 	    		  //member는 인증한 경우... member로 시작 이거나, class로 시작이거나...
 	              .requestMatchers("/member/**","/class/**").authenticated()
 	              //실제 데이터 값은 : ROLE_MEMBER, 순서 지켜야 함
-	              .requestMatchers("/manager/**").hasRole("MEMBER")
+	              .requestMatchers("/manager/**").hasRole("MANAGER")
 	              //실제 데이터 값은 : ROLE_ADMIN
 	              .requestMatchers("/admin/**").hasRole("ADMIN")
 	              //나머지는 아무거나 다 사용함
@@ -40,7 +40,8 @@ public class SecurityConfig {
 //	        .logout(logout -> logoutinvalidateHttpSession(true).logoutSuccessUrl("/"))
 //	        .userDetailsService(userDetailsService -> userDetailsService(securityUserDetail));
 	        
-		//기본 sercurity UI를 사용안하겠다고 표시함
+	    //Ramda표현식으로 변경 필요
+	    //기본 sercurity UI를 사용안하겠다고 표시함
 	    http.csrf().disable();
 	    //로그인 페이지 설정 후 이동할 페이지까지(/loginSuccess.do) 설정	    
 		http.formLogin().loginPage("/login.do").defaultSuccessUrl("/loginSuccess.do", true);

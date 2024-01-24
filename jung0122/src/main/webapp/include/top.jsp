@@ -21,22 +21,25 @@
 </header>
 <nav>
 
-&emsp;&emsp;<a href=/index.do>홈으로</a>
+&emsp;&emsp;<a href=/index.do>홈으로</a> 
 
-&emsp;&emsp;<a href=/admin/admin.do>관리자</a>
-&emsp;&emsp;<a href=/manager/manager.do>매니저</a>
+&emsp;&emsp;<a href=/admin/admin.do>관리자</a> 
+&emsp;&emsp;<a href=/admin/memberRegist.do>회원등록</a>
+&emsp;&emsp;<a href=/admin/memberList.do>회원목록</a>
 
-&emsp;&emsp;<a href=/member/member1.do>Member1</a>
-&emsp;&emsp;<a href=/member/member2.do>Member2</a>
-&emsp;&emsp;<a href=/member/memberBoard.do>Member 게시판</a>
+&emsp;&emsp;<a href=/manager/manager.do>매니저</a> 
 
-&emsp;&emsp;<a href=/guest/guest.do>손님</a>
-&emsp;&emsp;<a href=/guestBoard/guestBoard.do>손님게시판</a>
+&emsp;&emsp;<a href=/member/member1.do>Member1</a> 
+&emsp;&emsp;<a href=/member/member2.do>Member2</a> 
+&emsp;&emsp;<a href=/member/memberBoard.do>Member게시판</a> 
 
-&emsp;&emsp;
-<c:if test="${not empty session}">
-  <a href=/logout> ${sessionID2} LOGOUT </a>
-  &emsp;${session.name}${session.role}
-</c:if>
+&emsp;&emsp;<a href=/guest/guest.do>손님</a> 
+&emsp;&emsp;<a href=/guestBoard/guestBoard.do>손님게시판</a> 
+
+&emsp;&emsp;<a href=/login.do>로그인</a> 
+&emsp;&emsp;<a href=/logout>로그아웃</a> 
+
+&emsp; ${session.name}
+
 
 </nav>

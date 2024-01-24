@@ -9,12 +9,10 @@ import org.springframework.stereotype.Service;
 import com.rubypaper.login.LoginServiceImpl;
 import com.rubypaper.login.LoginVO;
 
-import jakarta.servlet.http.HttpSession;
-
 @Service
 public class SecurityUserDetailsService implements UserDetailsService {
-	@Autowired
-	HttpSession session;
+//	@Autowired
+//	HttpSession session;
 
 	public SecurityUserDetailsService() {
 		System.out.println("==> SecurityUserDetailsService ");
@@ -39,14 +37,21 @@ public class SecurityUserDetailsService implements UserDetailsService {
 		System.out.println("===> username : " + username);
 		vo.setUsername(username);
 		LoginVO user = service.loginOK(vo);
+		
 		if (user == null) {
-			//로그인 실패
+			//사용자 없음
+			System.out.println("===> 사용자 없음 : " + user);
 			throw new UsernameNotFoundException(username + "사용자 없음");
 		} else {
-			//로그인 성공
-			session.setAttribute("session", user);
+			//사용자 ID 있음
+			System.out.println("===> 사용자 있음 : " + user);
+			//session.setAttribute("session", user);
 			return new SecurityUser(user);
 		}
-		//return null;
+//		return User.builder()
+//			        .username(user.getName())
+//			        .password(user.getPassword())
+//			        .roles(user.getRole().toString())
+//			        .build();
 	}
 }

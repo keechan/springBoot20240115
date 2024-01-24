@@ -11,6 +11,4 @@ public class LoginVO {
     private String role;
     private String name;
     private String grade;
-    
-    private String SessionID;
 }

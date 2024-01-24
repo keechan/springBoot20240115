@@ -1,5 +1,0 @@
-package com.korea.test.login;
-
-public interface LogintService {
-
-}
