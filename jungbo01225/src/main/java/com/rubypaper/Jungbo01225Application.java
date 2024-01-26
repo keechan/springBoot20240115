@@ -1,0 +1,15 @@
+package com.rubypaper;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+
+@SpringBootApplication
+@ComponentScan(basePackages= {"com.rubypaper"})
+public class Jungbo01225Application {
+	
+	public static void main(String[] args) {
+		SpringApplication.run(Jungbo01225Application.class, args);
+	}
+
+}

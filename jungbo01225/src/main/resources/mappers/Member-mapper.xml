@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "D:/springBoot20240115/jung0122/src/main/webapp/DTD/mybatis-3-mapper.dtd">
+
+
+ <mapper namespace="com.rubypaper.member.MemberDao">
+  
+  <select id="selectAll"  
+   		  parameterType="com.rubypaper.member.MemberVO"
+          resultType="com.rubypaper.member.MemberVO" >
+    
+    select  trim(idx) as idx, id as username, password, role, name, grade, files
+    from  MEMBER_0122  order  by  idx  desc    
+  </select>
+       
+  <select id="selectOne"  
+   		  parameterType="com.rubypaper.member.MemberVO"
+          resultType="com.rubypaper.member.MemberVO" >
+    
+    select  idx, id as username, password, role, name, grade, files
+    from  MEMBER_0122  where trim(idx) = #{idx}    
+  </select>
+  
+  <select id="selectUsername"  
+   		  parameterType="com.rubypaper.member.MemberVO"
+          resultType="com.rubypaper.member.MemberVO" >
+    
+    select  trim(idx), id as username, password, role, name, grade, files
+    from  MEMBER_0122  where id = #{username}    
+  </select>
+    
+  <insert id="insert" parameterType="com.rubypaper.member.MemberVO">
+   INSERT INTO MEMBER_0122(idx , id, password, role, name, grade, files)
+   VALUES (idx.nextval,#{username},#{password},#{role}, #{name}, #{grade}, #{files})
+  </insert> 
+  
+  <update id="update" parameterType="com.rubypaper.member.MemberVO">
+   update MEMBER_0122 set password=#{password} where id=#{username}
+  </update>
+
+  <delete id="delete" parameterType="com.rubypaper.member.MemberVO">
+   DELETE FROM MEMBER_0122
+    WHERE idx = #{idx}
+  </delete>
+ </mapper>

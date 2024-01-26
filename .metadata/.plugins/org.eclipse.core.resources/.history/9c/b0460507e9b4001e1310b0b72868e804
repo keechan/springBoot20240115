@@ -1,5 +1,0 @@
-package com.korea.test.logint;
-
-public interface LogintService {
-	void insert(LogintVO vo);
-}
