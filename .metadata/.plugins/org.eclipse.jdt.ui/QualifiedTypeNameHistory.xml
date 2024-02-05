@@ -6,4 +6,6 @@
     <fullyQualifiedTypeName name="org.springframework.security.core.annotation.AuthenticationPrincipal"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="ch.qos.logback.core.net.SyslogOutputStream"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>

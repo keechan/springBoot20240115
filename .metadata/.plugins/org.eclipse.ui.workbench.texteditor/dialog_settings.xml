@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="delete"/>
+		<item key="selection" value="===&gt; /member/editOK.do"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="===&gt; /member/editOK.do"/>
+			<item value="memberEdit"/>
+			<item value="onclick"/>
+			<item value="&lt;style"/>
+			<item value="등록일"/>
+			<item value="/member/insertOK.do"/>
 			<item value="delete"/>
 			<item value="path"/>
 			<item value="request"/>
@@ -15,14 +21,8 @@
 			<item value="update"/>
 			<item value="security"/>
 			<item value="memberUpdate"/>
-			<item value="/member/insertOK.do"/>
 			<item value="ojdbc11"/>
 			<item value="thy"/>
-			<item value="tomcat"/>
-			<item value="embed"/>
-			<item value="SecurityUser"/>
-			<item value="insert"/>
-			<item value="SecurityConfig"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

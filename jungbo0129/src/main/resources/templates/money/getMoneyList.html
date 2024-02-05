@@ -1,0 +1,41 @@
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+table {
+	width : 800px;
+}
+
+tr {
+	text-align:center;
+}
+
+#tdleft {
+	text-align: left;
+}
+</style>
+</head>
+<body>
+<div th:replace="/include/top"></div>
+
+<section>
+<br><br>
+<div align="center">
+  <h1> 매출보기 </h1>
+  <table border=1>
+   <tr> <td align=center >회원번호</td><td align=center>회원명</td><td align=center>등급코드</td>
+        <td align=center>금액</td></tr>
+  
+     <tr th:each="m : ${li}">
+	     <td align=center> th:text="${m.custno}"></td>
+	     <td align=center th:text="${m.custname}"></td>
+	     <td align=center th:text="${m.grade}"></td>
+	     <td id=tdleft th:text="${m.price}"></td>
+     </tr>
+  </table>  
+</div>
+</section>
+<div th:replace="/include/bottom::footer"></div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "D:/springBoot20240115/jung0122/src/main/webapp/DTD/mybatis-3-mapper.dtd">
+
+ <mapper namespace="com.rubypaper.money.MoneyDao">
+  <select id="getMoneyList"  
+   		  parameterType="com.rubypaper.money.MoneyVO"
+          resultType="com.rubypaper.money.MoneyVO" >
+	  select m1.custno custno, m2.custname, m2.grade, sum(m1.price) price 
+        from money_tbl_02 m1
+        join member_tbl_02 m2
+          on (m1.custno = m2.custno)
+       group by m1.custno, custname, grade
+  </select>
+ </mapper>

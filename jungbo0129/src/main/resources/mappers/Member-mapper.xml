@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "D:/springBoot20240115/jung0122/src/main/webapp/DTD/mybatis-3-mapper.dtd">
+
+
+ <mapper namespace="com.rubypaper.member.MemberDao">
+  
+  <select id="selectAll"  
+   		  parameterType="com.rubypaper.member.MemberVO"
+          resultType="com.rubypaper.member.MemberVO" >
+    select custno, custname, password, phone, address, joindate, to_char(joindate, 'yyyymmdd') joindateStr, grade, city
+      from member_tbl_02
+  </select>
+
+  <select id="selectOne"
+          parameterType="com.rubypaper.member.MemberVO"
+          resultType="com.rubypaper.member.MemberVO" >
+  select max(custno)+1 custno
+    from member_tbl_02
+  </select>
+  
+  <select id="edit"  
+   		  parameterType="com.rubypaper.member.MemberVO"
+          resultType="com.rubypaper.member.MemberVO" >
+    select custno, custname, password, phone, address, joindate, to_char(joindate, 'yyyymmdd') joindateStr, grade, city
+      from member_tbl_02
+     where custno = #{custno}
+  </select>
+
+  <insert id="insert" parameterType="com.rubypaper.member.MemberVO">
+    insert into member_tbl_02 (custno, custname, phone, address, joindate, grade, city)
+     values (#{custno}, #{custname}, #{phone}, #{address}, #{joindateStr}, #{grade}, #{city})
+
+  </insert>
+  
+  <update id="update" parameterType="com.rubypaper.member.MemberVO">
+    update member_tbl_02 
+       set password = #{password}
+          ,phone = #{phone}
+          ,address = #{address}
+     where custno = #{custno}
+  </update>  
+ </mapper>
