@@ -25,19 +25,19 @@ public class Board {
 	private Long seq;
 	@Column(length=20)
 	private String title;
-	@Column(precision=3, scale=2)
-	private int age;
+	@Column(precision=3)
+	private Long age;
 	@Column(nullable=true)
 	private String writer;
 	private String content;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
-	@Column(insertable=true, columnDefinition="date default sysdate")
+	@Column(insertable=false, columnDefinition="date default sysdate")
 	private Date create_Date;
-	@Column(insertable=true, columnDefinition="number default 1")
+	@Column(insertable=false, columnDefinition="number default 1")
 	private Long cnt;
-	@Column(precision=12, scale=2,
+	@Column(precision=12, scale=2, insertable=false,
 			columnDefinition = "decimal(12, 2) default 0.00")
 	private BigDecimal pay;
 	@Transient

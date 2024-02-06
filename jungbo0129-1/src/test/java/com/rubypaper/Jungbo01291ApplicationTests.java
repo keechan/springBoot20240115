@@ -22,27 +22,27 @@ class Jungbo01291ApplicationTests {
 //		}
 //	}
 	
-	@Test
-	void testSelectAll2() {
-		Iterable<Board> li = repository.findAll();
-		for (Board i : li) {
-			System.out.println("==> " + i);
-		}
-	}
-
 //	@Test
-//	void contextLoads() {
-//		for (int i=0;i<10;i++) {
-//		Board vo = new Board();
-//		vo.setTitle("JPA 연습");
-//		vo.setWriter("둘리"+i);
-//		vo.setContent("둘리가 JPA를 ...");
-//		vo.setAge("17");
-//		//vo.setCreateDate(new Date());
-//		vo.setCnt(7L);
-//		repository.save(vo);
+//	void testSelectAll2() {
+//		Iterable<Board> li = repository.findAll();
+//		for (Board i : li) {
+//			System.out.println("==> " + i);
 //		}
 //	}
+
+	@Test
+	void contextLoads() {
+		for (int i=0;i<10;i++) {
+			Board vo = new Board();
+			vo.setTitle("JPA 연습");
+			vo.setWriter("둘리"+i);
+			vo.setContent("둘리가 JPA를 ...");
+			vo.setAge("17");
+			//vo.setCreateDate(new Date());
+			vo.setCnt(7L);
+			repository.save(vo);
+		}
+	}
 	
 //	@Test
 //	void testGetBoard() {

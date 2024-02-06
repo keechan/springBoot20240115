@@ -1,6 +1,6 @@
 package com.rubypaper;
 
-import java.util.Date;
+import java.util.List;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -14,32 +14,30 @@ import com.rubypaper.domain.BoardCrudRepository;
 class Jpa0206ApplicationTests {
 	@Autowired
 	BoardCrudRepository repository;
+
+//	@BeforeEach
+//	void selectAll() {
+//		List<Board> li = (List<Board>) repository.findAll();
+//		for (Board m : li) {
+//			System.out.println("BeforeEach ===> " + m.getTitle());
+//		}
+//	}
+	
+	//title = JPA 연습3 찾기
+	@AfterEach
+	void findByTitleLike() {
+		List<Board> li1 = repository.findByAgeBetweenOrderBySeqDesc(11, 20);
+		for (Board m : li1) {
+			System.out.println("AfterEachPay ====> " + m);
+		}
+	}
 	
 	@Test
 	void contextLoads() {
-		//update
-//		Board board = repository.findById(2L).get();
-//		//Board board = repository.find
-//		board.setTitle("01234567890123456789");
-//		board.setCnt(12L);
-//		repository.save(board);
-//		for (int i=0;i<10;i++) {
-			Board vo = new Board();
-			vo.setWriter("Writer");			
-			vo.setTitle("0123456");
-			vo.setAge(10);
-			vo.setContent("둘리가 JPA를 ...");
-			vo.setCreate_Date(new Date());
-			vo.setCnt(null);
-			repository.save(vo);
-//		}
-	}
-	
-	@AfterEach
-	void selectIterable() {
-		Iterable<Board> li = repository.findAll();
-		for (Board m : li) {
-			System.out.println("==> " + m);
+		//List<Board> board = (List<Board>) repository.findAll();
+		//Board board = repository.find
+		for (int i=0;i<10;i++) {
+			System.out.println("contextLoads..." + i);
 		}
 	}
 }
