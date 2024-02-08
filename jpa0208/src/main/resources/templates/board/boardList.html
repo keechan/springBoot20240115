@@ -1,0 +1,20 @@
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+  <h1> 회원목록 보기 </h1>
+  <table border=1>
+   <tr align=center> <td>SEQ</td><td>TITLE</td><td>CONTENT</td><td>CREATE_DATE</td>
+        <td> CNT </td></tr>
+     <tr th:each="m : ${li}"> 
+	     <td th:text="${m.seq}"></td>
+	     <td th:text="${m.title}"></td>
+	     <td th:text="${m.content}"></td>
+	     <td th:text="${m.createDate}"></td>	     
+	     <td th:text="${m.cnt}"></td>
+     </tr>
+  </table>
+</body>
+</html>	
